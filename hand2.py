@@ -14,7 +14,7 @@ from sklearn.model_selection import cross_val_score
 def Load_data():
     print('Data Loading...')
     Sequence = []
-    with open('/home/wenjian/IPPF-FE-main/bin-dataset/test-970-fasta.txt', 'r') as myfile:
+    with open('fasta.txt', 'r') as myfile:
         for line in myfile:
             if line[0] != '>':
                 Sequence.append(line.strip('\n'))
@@ -56,5 +56,5 @@ print(unique_letters)
 print(sequence[1],len(sequence[1]))
 features_crafted=Get_features(strs,6 )
 print('feature_crafted:',len(features_crafted),len(features_crafted[1]))
-with open('/home/wenjian/IPPF-FE-main/bin-dataset/bin-testx-hand6.pkl', 'wb') as f:
+with open('hand.pkl', 'wb') as f:
     pickle.dump(features_crafted, f)
