@@ -1,8 +1,5 @@
-import torch
-from transformers import T5EncoderModel, T5Tokenizer
 import re
 import gc
-import lightgbm
 from Extract_feature import *
 import pickle
 import sys
