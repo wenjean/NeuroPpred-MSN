@@ -1,5 +1,10 @@
 hand.py are methods for manual feature extraction
+In line 14 of hand.py, you can change the code accordingly to the format of the data.The default is fasta. Line 56 specifies the type of file to save. You can adjust it accordingly to your needs
+
 t5.py is the method for embedding feature extraction
+In line 16 of t5.py you will extract the file where the features will be embedded. You can change the code accordingly to the form of the data. Rows 35 and 36 are T5 model files, you need to get them on huggingface or contact me to get them
+Line 72 specifies the type of file to save. You can adjust it accordingly to your needs
+
 word2vec2.py is a method for word vectors
 dataset.txt is the training and test set
 train.py and test.py are the training and testing code, respectively
