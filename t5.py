@@ -4,7 +4,6 @@ import transformers
 from transformers import T5EncoderModel, T5Tokenizer
 import re
 import gc
-import lightgbm
 import pickle
 import sys
 from sklearn.metrics import roc_auc_score
@@ -69,5 +68,5 @@ Mysequence = Load_data()
 featuers_embedding_normalize=ALL_features(Mysequence)
 featuers_embedding_normalize =np.array(featuers_embedding_normalize)
 print('特征数量与维度：',featuers_embedding_normalize.shape)
-with open('lbce-t5.pkl', 'wb') as f:
+with open('t5.pkl', 'wb') as f:
         pickle.dump(featuers_embedding_normalize, f)
