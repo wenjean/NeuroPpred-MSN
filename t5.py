@@ -13,7 +13,7 @@ import numpy as np
 def Load_data():
     import pandas as pd
     # 读取CSV文件，假设第一列是序列，第二列是标签
-    data= pd.read_csv('/home/wenjian/IPPF-FE-main/datasetPLM/train.csv', header=None)
+    data= pd.read_csv('train.csv', header=None)
     import numpy as np
     # （1）获取第1列
     Sequence = data.iloc[1:,0]
@@ -66,7 +66,7 @@ def ALL_features(sequences_Example):
     return features_normalize
 Mysequence, label_embedding=Load_data()
 
-with open('/mnt/raid5/data4/jwen/NetBCE-mainn/NetBCE-main/data/bcetrain.pkl', 'rb') as f:
+with open('t5.pkl', 'rb') as f:
     loaded_sequences = pickle.load(f)
 featuers_embedding_normalize=ALL_features(loaded_sequences)
 featuers_embedding_normalize =np.array(featuers_embedding_normalize)
