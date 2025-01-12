@@ -3,7 +3,6 @@ from sklearn import metrics
 from transformers import T5EncoderModel, T5Tokenizer
 import re
 import gc
-import lightgbm
 import pickle
 import sys
 from sklearn.metrics import roc_auc_score
