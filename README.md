@@ -2,12 +2,13 @@ Introduction
 This repository contains code for "NeuroPpred-MSN: A Neuropeptide Prediction Model Based on Multi-feature Fusion and Siamese Networks".
 
 Paper Abstract
-Plant Small Secreted Peptides (SSPs) play an important role in plant growth, development, and plant-microbe interactions. Therefore, the identification of SSPs is essential for revealing the functional mechanisms. Over the last few decades, machine learning-based methods have been developed, accelerating the discovery of SSPs to some extent. However, existing methods highly depend on hand-crafted feature engineering, which easily ignores the latent feature representations and impacts the predictive performance. Here, we propose ExamPle, a novel deep learning model using Siamese network and multi-view representation for the explainable prediction of the plant SSPs. Benchmarking comparison results show that our ExamPle performs significantly better than existing methods in the prediction of plant SSPs. Also, our model shows excellent feature extraction ability by using dimension reduction tools. Importantly, by utilizing in silico mutagenesis (ISM) experiments, ExamPle can discover sequence characteristics and identify the contribution of each amino acid. The key novel principle learned by our model is that the head region of the peptide and some specific sequential patterns are strongly associated with the SSPs’ functions. Thus, ExamPle is a competitive model and tool for plant SSPs prediction and effective plant SSPs design.
+The discovery of neuropeptides offers numerous opportunities for identifying novel drugs and targets to treat a variety of diseases. While various computational methods have been proposed, there remains potential for further performance improvement. In this work, we introduce NeuroPpred-MSN, an innovative and efficient neuropeptide prediction model that leverages multi-feature fusion and Siamese networks. To comprehensively represent the information of the neuropeptides, the peptide sequences were encoded by four encoding schemes (token embedding coding, word2vector coding, embedded features coding, and handcrafted features coding). Then, the token embedding and word2vector embedding were fed to a Siamese network channel. In the other channel of the model, peptide sequences and their secondary structure sequences were fed into the ProtT5-XL-UniRef50 model to generate the embedding features, while handcrafted encoding techniques were used to extract the physicochemical information. Then the two kinds of features are fused and fed into a Bi-GRU network for further processing. Ultimately, the outputs of the two channels are integrated into a fully connected layer, thereby facilitating the generation of the final prediction. The results of the independent test set indicate that NeuroPpred-MSN exhibits superior predictive performance, with an AUROC of 98.3%, exceeding the performance of other state-of-the-art predictors.
 
 Dataset
-The dataset in paper "ExamPle" is included in .dataset/SSP_dataset.csv
+The dataset in paper is included in data2.csv
 
 Usage
-python main.py
-Acknowledgement
-Thanks to Hao Cheng (He used to be a member of Weilab and now continues his PhD life in the Ohio State University). He provided some advice and guidance on building the ExamPle framework.
+
+python test.py
+
+
